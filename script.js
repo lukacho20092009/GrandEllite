@@ -53,28 +53,25 @@ document.addEventListener('DOMContentLoaded', () => {
             card3_p: "We take full responsibility for your digital image. Website, ad campaigns, and <strong>exclusive photo/video shoots with models</strong>. All in one space.",
 
             // ვებ-დეველოპმენტის გვერდი
-            web_h1: "Professional Website",
-            web_p: "Create a powerful digital platform for your business",
-            best_choice: "Best Value",
-            pkg_type: "COMPLETE WEB SOLUTION",
-            pkg_title_web: "Business Website Full Package",
-            feat_design: "Unique Website Design",
-            feat_ui: "Modern Design",
-            feat_resp: "Fully Responsive Website",
-            feat_conv: "Design that makes your business easy to understand",
-            feat_maps: "Google Maps Integration",
-            feat_panel: "Control Panel for easy editing",
-            feat_perf: "Fast Loading Speed",
-            feat_dev: "Attractive design using modern methods",
-            benefit1_h: "Sales Growth",
-            benefit1_p: "Your business is available 24/7, which means more customers and revenue.",
-            benefit2_h: "Build Trust",
-            benefit2_p: "A professional site increases brand authority and customer loyalty.",
-            benefit3_h: "Automation",
-            benefit3_p: "Save time: Customers find information and contact you easily.",
-            start_from: "Starting from",
-            order_btn: "Order Project",
-            pkg_title: "Business Website Full Package",
+web_h1: "Professional Websites",
+        web_p: "Create a powerful digital platform for your business",
+        rental_badge: "Flexible Choice",
+        rental_type: "WEBSITE RENTAL",
+        rental_title: "Monthly Payment",
+        feat_web: "Website",
+        feat_modern: "Modern Attractive Design",
+        feat_responsive: "Adaptive to Any Device",
+        feat_fast: "Fast Website Loading",
+        feat_host_dom: "Hosting and Domain",
+        feat_easy: "Easy for Users to Understand",
+        feat_no_costs: "No Extra Costs",
+        feat_cancel: "Cancel Website Anytime",
+        per_month: "per month",
+        best_choice: "Best Price",
+        pkg_type: "COMPLETE WEB SOLUTION",
+        pkg_title_web: "Website Full Package",
+        start_from: "Starting Price",
+        order_btn: "Order",
 
             
             feat_shoot:"Photo/Video Shooting",
@@ -130,6 +127,9 @@ document.addEventListener('DOMContentLoaded', () => {
             1699:"1699$",
             4999:"4999$",
             2999:"2999$",
+            4999:"4999$",
+            1499:"1499$",
+            199:"199$"
 
 
         },
@@ -162,29 +162,25 @@ document.addEventListener('DOMContentLoaded', () => {
             card3_p: "ჩვენ ვიღებთ სრულ პასუხისმგებლობას თქვენს ციფრულ იმიჯზე. საიტი, რეკლამა და <strong>ექსკლუზიური გადაღებები მოდელებთან ერთად</strong>.",
 
             // ვებ-დეველოპმენტის გვერდი
-            web_h1: "პროფესიონალური ვებ-საიტი",
-            web_p: "შექმენი მძლავრი ციფრული პლატფორმა შენი ბიზნესისთვის",
-            best_choice: "Best Value",
-            pkg_type: "COMPLETE WEB SOLUTION",
-            pkg_title_web: "ბიზნეს საიტის სრული პაკეტი",
-            feat_design: "უნიკალური ვებ-საიტი",
-            feat_ui: "თანამედროვე დიზაინი",
-            feat_resp: "ნებისმიერ მოწყობილობაზე მორგებული ვებ-საიტი",
-            feat_conv: "დიზაინი, რომლის მეშვეობით მომხმარებელი მარტივად აღიქვავს თქვენს ბიზნესს",
-            feat_maps: "Google Map ის დამატება საიტზე",
-            feat_panel: "Control panel რომლის მეშვეობითაც შესაძლებელია ვებ-საიტის რედაქტირება",
-            feat_perf: "ვებ-საიტის სწრაფი ჩატვირთვა",
-            feat_dev: "თანამედროვე მეთოდების გათვალისწინებით მიმზიდველი ვებ-საიტი",
-            benefit1_h: "გაყიდვების ზრდა",
-            benefit1_p: "თქვენი ბიზნესი ხელმისაწვდომია 24/7-ზე, რაც ნიშნავს მეტ კლიენტს და შემოსავალს.",
-            benefit2_h: "ნდობის მოპოვება",
-            benefit2_p: "პროფესიონალური საიტი ზრდის ბრენდის ავტორიტეტს და მომხმარებლის ლოიალობას.",
-            benefit3_h: "ავტომატიზაცია",
-            benefit3_p: "დაზოგეთ დრო: მომხმარებელი თავად პოულობს ინფორმაციას და გიკავშირდებათ მარტივად.",
-            start_from: "საწყისი ფასი",
-            order_btn: "დაუკვეთე პროექტი",
-            pkg_title: "ვებ-საიტის სრული პაკეტი",
-
+           web_h1: "პროფესიონალური ვებ-საიტები",
+           web_p: "შექმენი მძლავრი ციფრული პლატფორმა შენი ბიზნესისთვის",
+           rental_badge: "მოქნილი არჩევანი",
+           rental_type: "საიტის გაქირავება",
+           rental_title: "ყოველთვიურად გადახდა",
+           feat_web: "ვებ-საიტი",
+           feat_modern: "თანამედროვე მიმზიდველი დიზაინი",
+           feat_responsive: "ნებისმიერ მოწყობილობაზე მორგებული",
+           feat_fast: "ვებ-საიტის სწრაფი ჩატვირთვა",
+           feat_host_dom: "ჰოსტინგი და დომეინი",
+           feat_easy: "მომხმარებლისთვის მარტივად გასაგები",
+           feat_no_costs: "ზედმეტი ხარჯების გარეშე",
+           feat_cancel: "ვებ-საიტის გაუქმება ნებისმიერ დროს",
+           per_month: "თვეში",
+           best_choice: "საუკეთესო ფასი",
+           pkg_type: "სრული ვებ-გადაწყვეტილება",
+           pkg_title_web: "ვებ-საიტის სრული პაკეტი",
+           start_from: "საწყისი ფასი",
+           order_btn: "შეკვეთა",
 
             // სრული სერვისის გვერდი (All-in-One)
             all_in_one_h1: "ყველაფერი ერთ სივრცეში",
@@ -242,7 +238,10 @@ document.addEventListener('DOMContentLoaded', () => {
             699: "699₾",
             1199:"1199₾",
             1699:"1699₾",
-            2999:"2999$",
+            2999:"2999₾",
+            1499: "1499₾",
+            4999:"4999₾",
+            199:"199₾"
 
 
         }
@@ -303,3 +302,4 @@ function updatePageText() {
     // პირველადი ჩატვირთვა
     updatePageText();
 });
+
