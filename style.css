@@ -237,7 +237,24 @@ nav a:last-child:hover {
     transform:translateY(0);
     background:rgba(255,77,77,0.15);
 }
+body {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px);
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
 
+body.is-visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+body.is-leaving {
+    opacity: 0;
+    transform: translateY(-20px);
+    filter: blur(5px);
+}
 @media (max-width:900px){
 
     .lang-btn{
