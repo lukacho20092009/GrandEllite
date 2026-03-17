@@ -1,322 +1,138 @@
-body {
-    font-family: 'Inter', 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Web Development | Grand Ellite</title>
+<link rel="icon" type="image/jpg" href="https://res.cloudinary.com/dri8nh3tr/image/upload/v1773676281/WhatsApp_Image_2026-03-16_at_19.22.04_e9onuj.jpg">    
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="marketing.css"> 
+<meta name="description" content="Grand Ellite - Professional Digital Solutions & Web Development in Georgia. პროფესიონალური ციფრული გადაწყვეტილებები და ვებ-გვერდების დამზადება.">
+<meta name="keywords" content="Grand Ellite, Digital Solutions, ვებ-საიტების დამზადება, Web Development Georgia, Social Media Marketing, ციფრული მარკეტინგი, ბიზნეს გადაწყვეტილებები, SEO Georgia">
+<meta name="author" content="Grand Ellite Team">
+<!-- <link rel="alternate" hreflang="ka" href="https://grandellite.ge/ka" />
+<link rel="alternate" hreflang="en" href="https://grandellite.ge/en" /> -->
+<meta property="og:title" content="Grand Ellite | Digital Solutions & Web Development">
+<meta property="og:description" content="Professional digital services for your business. შექმენი შენი ციფრული მომავალი ჩვენთან ერთად.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://grandellite.ge">
+<meta property="og:image" content="https://t4.ftcdn.net/jpg/06/12/22/29/360_F_612222999_7nT8JXjdVkJMOdRHLBhQBqTvV8flOEJO.jpg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-.top-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 6%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    width: 100%;
-    box-sizing: border-box;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    top: 0;
-    z-index: 1000;
-}
+<div class="top-nav">
+    <a href="index.html#services" class="back-btn-minimal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        <span data-key="go_back">Go Back</span>
+    </a>
+    
+    <nav id="nav-menu">
+        <a href="index.html#home" data-key="nav_home">Home</a>
+        <a href="index.html#services" data-key="nav_services">Services</a>
+        <a href="#contact" data-key="nav_contact">Contact</a>
+        <button id="lang-switch" class="lang-btn">KA</button>
+    </nav>
 
-.back-btn-minimal {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    text-decoration: none;
-    color: #111;
-    font-weight: 700;
-    font-size: 15px;
-    transition: 0.3s;
-}
+    <div class="burger" id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</div>
 
-.back-btn-minimal:hover {
-    color: #00d4a5;
-    transform: translateX(-5px);
-}
+<section class="packages-section">
+    <div class="full-service-hero">
+        <h1 data-key="all_in_one_h1">All-in-One <span class="accent">Solution</span></h1>
+        <p class="hero-subtitle" data-key="all_in_one_p">Comprehensive strategies for your business growth</p>
+    </div>
+    <div class="packages-grid">
+        <div class="package-card-simple">
+            <div class="pkg-type">STARTUP</div>
+            <div class="pkg-title" data-key="pkg1_title">Budget Package</div>
+            <ul class="pkg-list">
+                <li><span class="dot"></span> <span data-key="feat_templates">Ad Templates</span></li>
+                <li><span class="dot"></span> <span data-key="feat_meta">Meta Advertising</span></li>
+            </ul>
+            <div class="pkg-price-box">
+                <span class="price" data-key="699">699 $</span>
+            </div>
+            <a href="#contact" class="pkg-btn" data-key="order_btn">Order</a>
+        </div>
 
-.nav-brand {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
+        <div class="package-card-simple">
+            <div class="pkg-type">BUSINESS</div>
+            <div class="pkg-title" data-key="pkg2_title">Standard Package</div>
+            <ul class="pkg-list">
+                <li><span class="dot"></span> <span data-key="feat_templates">Ad Templates</span></li>
+                <li><span class="dot"></span> <span data-key="feat_meta">Meta Advertising</span></li>
+                <li><span class="dot"></span> <span data-key="feat_voice">Video with Voiceover</span></li>
+            </ul>
+            <div class="pkg-price-box">
+                <span class="price" data-key="1199"> 1199$</span>
+            </div>
+            <a href="#contact" class="pkg-btn" data-key="order_btn">Order</a>
+        </div>
 
-.nav-brand img {
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
-}
+        <div class="package-card-simple business-highlight">
+            <div class="pkg-badge" data-key="best_choice">Best Choice</div>
+            <div class="pkg-type accent-text">PREMIUM</div>
+            <div class="pkg-title" data-key="pkg3_title">Full Package</div>
+            <ul class="pkg-list">
+                <li><span class="dot"></span> <span data-key="feat_voice">Video Voiceover</span></li>
+                <li><span class="dot"></span> <span data-key="feat_shoot">Photo/Video Shooting</span></li>
+                <li><span class="dot"></span> <span data-key="feat_models">Shooting with Models</span></li>
+                <li><span class="dot"></span> <span data-key="feat_templates">Ad Templates</span></li>
+                <li><span class="dot"></span> <span data-key="feat_meta">Meta Advertising</span></li>
+            </ul>
+            <div class="pkg-price-box">
+                <span class="price" data-key="1699">1699 $</span>
+            </div>
+            <a href="#contact" class="pkg-btn" data-key="order_btn">Order</a>
+        </div>
+    </div>
+</section>
 
-.logo-text {
-    font-size: 18px;
-    font-weight: 800;
-}
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <div class="contact-info">
+            <span class="sub-title" data-key="cont_sub">Contact</span>
+            <h2 class="contact-title" data-key="cont_h2">Start Your <span class="accent">Project</span></h2>
+            <p class="contact-desc" data-key="cont_desc">Get in touch and let's build your profitable business together.</p>
+            
+            <div class="contact-methods">
+            <a href="mailto:grandellite45@yahoo.com" class="method-item">
+                <div class="icon-img-box">
+                    <img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="Email" class="method-img">
+                </div>
+                <div>
+                    <h4 data-key="email">Email</h4>
+                    <p>grandellite45@yahoo.com</p>
+                </div>
+            </a>
+            </div> 
+        </div>
+        
+        <div class="contact-branding-box">
+            <div class="floating-card">
+                <img class="float-img" src="https://res.cloudinary.com/dri8nh3tr/image/upload/v1773676724/white_uu71zy.jpg" alt="Logo">
+                <div class="card-logo">Grand <span>Ellite</span></div>
+                <p class="excellence-text">Digital Excellence</p>
+                <div class="card-footer">
+                    <span>EST. 2026</span>
+                    <div class="availability" data-key="avail">
+                        <span class="dot"></span> Available for Work
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-.logo-text span {
-    color: #00d4a5;
-}
+<footer style="margin-top: 50px;" data-key="footer">
+    © 2026 GRAND ELLITE DIGITAL AGENCY. ALL RIGHTS RESERVED.
+</footer>
 
-.full-service-hero {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.full-service-hero h1 {
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 900;
-    color: #111;
-    margin-bottom: 15px;
-}
-
-.full-service-hero .accent {
-    color: #00d4a5;
-}
-
-.hero-subtitle {
-    color: #666;
-    font-size: 18px;
-}
-
-.packages-section {
-    padding: 140px 8% 80px;
-    background: linear-gradient(180deg, #ffffff 0%, #f9fbfb 100%);
-}
-
-.packages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.package-card-simple {
-    background: #fff;
-    border: 1px solid #eee;
-    padding: 50px 40px;
-    border-radius: 40px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-    cursor: pointer;
-}
-
-.package-card-simple:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 50px rgba(0, 212, 165, 0.1);
-    border-color: #00d4a5;
-}
-
-.pkg-badge {
-    position: absolute;
-    top: 12px;
-    right: 35px;
-    background: #f0fdfa;
-    color: #00d4a5;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
-
-.business-highlight {
-    background: #fff;
-    border: 2px solid #00d4a5;
-}
-
-.business-highlight .pkg-badge {
-    background: #00d4a5;
-    color: #fff;
-}
-
-.pkg-type {
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-    color: #888;
-}
-
-.pkg-title {
-    font-size: 26px;
-    font-weight: 800;
-    margin-bottom: 35px;
-    color: #111;
-    line-height: 1.2;
-}
-
-.pkg-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 40px 0;
-    flex-grow: 1;
-}
-
-.pkg-list li {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #444;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    background: #00d4a5;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.pkg-price-box {
-    margin-top: auto;
-    margin-bottom: 30px;
-}
-
-.price {
-    font-size: 38px;
-    font-weight: 900;
-    color: #111;
-}
-
-.pkg-btn {
-    display: block;
-    text-align: center;
-    padding: 18px;
-    background: #f4f4f4;
-    color: #111;
-    text-decoration: none;
-    border-radius: 20px;
-    font-weight: 700;
-    transition: 0.3s;
-    border: none;
-}
-
-.pkg-btn:hover {
-    background: #111;
-    color: #fff;
-}
-
-.business-highlight .pkg-btn {
-    background: #00d4a5;
-    color: #fff;
-}
-
-.business-highlight .pkg-btn:hover {
-    background: #00b38a;
-    transform: scale(1.02);
-}
-
-footer {
-    text-align: center;
-    padding: 40px;
-    font-size: 13px;
-    color: #888;
-    background: #fff;
-    border-top: 1px solid #eee;
-    letter-spacing: 1px;
-}
-
-.single-package-container {
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.featured-card {
-    width: 100%;
-    padding: 60px !important;
-    background: linear-gradient(145deg, #ffffff, #f0fdfa) !important;
-}
-
-.pkg-grid-internal {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-bottom: 40px;
-}
-
-.price-label {
-    font-size: 16px;
-    color: #666;
-    margin-left: 10px;
-    font-weight: 500;
-}
-
-@media (max-width: 600px) {
-    .pkg-grid-internal {
-        grid-template-columns: 1fr;
-    }
-    .featured-card {
-        padding: 40px 25px !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .logo-text {
-        display: none; 
-    }
-    .packages-section {
-        padding-top: 100px;
-    }
-    .packages-grid {
-        grid-template-columns: 1fr;
-    }
-    .package-card-simple {
-        padding: 40px 30px;
-    }
-    .benefits-grid {
-        grid-template-columns: 1fr;
-        padding: 0 20px;
-    }
-}
-
-.benefits-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 60px;
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.benefit-item {
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 25px;
-    border: 1px solid #f0f0f0;
-    transition: 0.3s;
-    text-align: center;
-}
-
-.benefit-item:hover {
-    transform: translateY(-5px);
-    border-color: #00d4a5;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-}
-
-.benefit-icon {
-    font-size: 32px;
-    margin-bottom: 15px;
-}
-
-.benefit-item h4 {
-    font-size: 18px;
-    font-weight: 800;
-    margin-bottom: 12px;
-    color: #111;
-}
-
-.benefit-item p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.6;
-}
-
+<script src="script.js"></script>
+</body>
+</html>
