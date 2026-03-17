@@ -101,6 +101,7 @@ body {
     display: flex;
     flex-direction: column;
     box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    cursor: pointer;
 }
 
 .package-card-simple:hover {
@@ -111,7 +112,7 @@ body {
 
 .pkg-badge {
     position: absolute;
-    top: 25px;
+    top: 12px;
     right: 35px;
     background: #f0fdfa;
     color: #00d4a5;
