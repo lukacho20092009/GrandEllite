@@ -1,10 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. ელემენტების პოვნა
     const burger = document.getElementById('burger');
     const navMenu = document.getElementById('nav-menu');
-    const langBtns = document.querySelectorAll('#lang-switch'); // ყველა ენის ღილაკი
-
-    // 2. ენის პარამეტრები
+    const langBtns = document.querySelectorAll('#lang-switch'); 
     let currentLang = localStorage.getItem('selectedLang') || 'en';
 
     const translations = {
@@ -174,19 +171,15 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // 3. ტექსტის განახლების ფუნქცია
     function updatePageText() {
-        // ენის ღილაკების ტექსტის განახლება (KA/EN)
         langBtns.forEach(btn => {
             btn.textContent = translations[currentLang].btn;
         });
 
-        // ყველა ელემენტის განახლება data-key ატრიბუტით
         document.querySelectorAll("[data-key]").forEach(el => {
             const key = el.getAttribute("data-key");
             if (translations[currentLang][key]) {
                 const content = translations[currentLang][key];
-                // თუ შეიცავს HTML თეგებს, ვიყენებთ innerHTML-ს
                 if (content.includes("<")) {
                     el.innerHTML = content;
                 } else {
@@ -196,7 +189,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 4. ენის შეცვლის ლოგიკა
     langBtns.forEach(btn => {
         btn.addEventListener("click", (e) => {
             e.preventDefault();
@@ -206,7 +198,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 5. ბურგერ მენიუს ლოგიკა
     if (burger && navMenu) {
         burger.addEventListener('click', (e) => {
             e.preventDefault();
@@ -215,7 +206,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // 6. WhatsApp ფუნქციები (გლობალური)
     window.toggleChat = function() {
         const chat = document.getElementById("waChat");
         if (chat) {
@@ -233,6 +223,30 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open(url, "_blank");
     };
 
-    // პირველადი ჩატვირთვა
     updatePageText();
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(() => {
+        document.body.classList.add("is-visible");
+    }, 100);
+
+    const links = document.querySelectorAll('a');
+    
+    links.forEach(link => {
+        link.addEventListener("click", e => {
+            const href = link.getAttribute("href");
+
+            if (href && href.endsWith(".html") && !href.startsWith("#")) {
+                e.preventDefault();
+                
+                document.body.classList.remove("is-visible");
+                document.body.classList.add("is-leaving");
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 600); 
+            }
+        });
+    });
 });
