@@ -63,7 +63,6 @@ nav a {
     margin-left: 35px;
     font-size: 13px;
     font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 1px;
     position: relative;
     padding-bottom: 6px;
@@ -402,19 +401,6 @@ display: none;
 .item-1 { transform: translateY(-20px); }
 .item-2 { transform: translateY(20px); }
 .gallery-item:hover img { transform: scale(1.1) rotate(2deg); }
-
-.badge-discount {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    background: #f43f5e;
-    color: white;
-    padding: 8px 20px;
-    border-radius: 50px;
-    font-weight: 900;
-    font-size: 13px;
-    z-index: 10;
-}
 
 .wa-container {
     position: fixed;
