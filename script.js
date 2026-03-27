@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // --- Configuration & State ---
     const burger = document.getElementById('burger');
     const navMenu = document.getElementById('nav-menu');
-    const langBtns = document.querySelectorAll('#lang-switch'); 
+    const langBtns = document.querySelectorAll('#lang-switch');
     let currentLang = localStorage.getItem('selectedLang') || 'en';
 
     const translations = {
         en: {
-            card3_div:"The best choice",
+            card3_div: "The best choice",
             btn: "KA",
             nav_home: "Home",
             nav_services: "Services",
@@ -74,9 +75,9 @@ document.addEventListener("DOMContentLoaded", () => {
             step3: "You get paid",
             ref_btn: "Start Earning Now",
             faq_sub: "FAQ",
-            pkg1_title:"Budget Package",
-            pkg2_title:"Standard Package",
-            pkg3_title:"Full Package",
+            pkg1_title: "Budget Package",
+            pkg2_title: "Standard Package",
+            pkg3_title: "Full Package",
             faq_h2: "Frequently Asked Questions",
             q1: "What are the benefits of working with you?",
             a1: "With us, you get a comprehensive service for a successful business. Instead of hiring different freelancers, Grand Ellite offers a complete package: Web development, ads, video editing, social media management, professional models, and domain/hosting setup.",
@@ -89,22 +90,39 @@ document.addEventListener("DOMContentLoaded", () => {
             cont_sub: "Contact",
             cont_h2: "Start Your Project",
             phone: "Phone",
-            number: "+1 951-598-7338", 
+            number: "+1 951-598-7338",
             avail: '<span class="dot"></span> Available for Work',
             cont_desc: "Get in touch and let's build your profitable business together.",
-            phone: "Phone",
             email: "Email",
-            avail: '<span class="dot"></span> Available for Work',
             699: "699$",
             1199: "1199$",
             1699: "1699$",
             2999: "2999$",
             4999: "4999$",
             1499: "1499$",
-            199: "199$"
+            199: "199$",
+            cont_p: "Fill out the form and our team will contact you shortly",
+            ph_name: "Your Name",
+            ph_phone: "Phone Number (5XX...)",
+            sel_service: "Select Service",
+            opt_web: "Web Development",
+            opt_ads: "Advertising (Meta/Google)",
+            opt_both: "Both Services",
+            ph_details: "Briefly describe your project...",
+            btn_send: "Send Message",
+            success_msg: "✔ Thank you! Your request has been received.",
+            why_title: "Why Grand Ellite?",
+            why_desc: "We create digital products that actually work.",
+            feat_sales_h: "Sales Oriented",
+            feat_sales_p: "We don't just create beautiful websites; we build tools for your business growth.",
+            feat_supp_h: "Full Support",
+            feat_supp_p: "Our team knows exactly what your business needs to increase sales volume.",
+            feat_speed_h: "Optimization & Speed",
+            feat_speed_p: "Maximum speed on all devices, which directly impacts your Google ranking.",
+            sakon: "Leave Your Details",
         },
         ka: {
-            card3_div:"საუკეთესო არჩევანი",
+            card3_div: "საუკეთესო არჩევანი",
             btn: "EN",
             nav_home: "მთავარი",
             nav_services: "სერვისები",
@@ -133,8 +151,8 @@ document.addEventListener("DOMContentLoaded", () => {
             rental_type: "ვებ-საიტის გაქირავება",
             rental_title: "ყოველთვიურად გადახდა",
             feat_web: "ვებ-საიტი",
-            feat_shoot:"ფოტო/ვიდეო გადაღება",
-            feat_models:"გადაღება მოდელებით",
+            feat_shoot: "ფოტო/ვიდეო გადაღება",
+            feat_models: "გადაღება მოდელებით",
             feat_modern: "თანამედროვე მიმზიდველი დიზაინი",
             feat_responsive: "ნებისმიერ მოწყობილობაზე მორგებული",
             feat_fast: "ვებ-საიტის სწრაფი ჩატვირთვა",
@@ -150,9 +168,9 @@ document.addEventListener("DOMContentLoaded", () => {
             order_btn: "შეკვეთა",
             all_in_one_h1: "ყველაფერი ერთ სივრცეში",
             all_in_one_p: "კომპლექსური გადაწყვეტილებები თქვენი ბიზნესის ზრდისთვის",
-            pkg1_title:"ბიუჯეტური პაკეტი",
-            pkg2_title:"სტანდარტული პაკეტი",
-            pkg3_title:"სრული პაკეტი",
+            pkg1_title: "ბიუჯეტური პაკეტი",
+            pkg2_title: "სტანდარტული პაკეტი",
+            pkg3_title: "სრული პაკეტი",
             pkg_num1: "პაკეტი №1",
             pkg_title1: "სტანდარტული ბიზნეს პაკეტი",
             pkg_num2: "პაკეტი №2",
@@ -201,10 +219,30 @@ document.addEventListener("DOMContentLoaded", () => {
             2999: "2999₾",
             4999: "4999₾",
             1499: "1499₾",
-            199: "199₾"
+            199: "199₾",
+            cont_p: "შეავსეთ მონაცემები და ჩვენი გუნდი მალე დაგიკავშირდებათ",
+            ph_name: "თქვენი სახელი",
+            ph_phone: "ტელეფონის ნომერი (5XX...)",
+            sel_service: "აირჩიეთ სერვისი",
+            opt_web: "ვებ-დეველოპმენტი",
+            opt_ads: "რეკლამა (Meta/Google)",
+            opt_both: "ორივე სერვისი",
+            ph_details: "მოგვწერეთ მოკლედ თქვენი ბიზნესის შესახებ...",
+            btn_send: "შეტყობინების გაგზავნა",
+            success_msg: "✔ მადლობა! თქვენი მოთხოვნა მიღებულია.",
+            why_title: "რატომ Grand Ellite?",
+            why_desc: "ჩვენ ვქმნით ციფრულ პროდუქტებს, რომლებიც რეალურად მუშაობენ.",
+            feat_sales_h: "გაყიდვებზე ორიენტირებული",
+            feat_sales_p: "ჩვენ არ ვქმნით უბრალოდ ლამაზ საიტებს; ჩვენ ვქმნით ინსტრუმენტებს თქვენი ბიზნესის ზრდისთვის.",
+            feat_supp_h: "სრული მხარდაჭერა",
+            feat_supp_p: "ჩვენმა გუნდმა ზუსტად იცის, რა სჭირდება თქვენს ბიზნესს გაყიდვების მოცულობის გასაზრდელად.",
+            feat_speed_h: "ოპტიმიზაცია და სისწრაფე",
+            feat_speed_p: "მაქსიმალური სისწრაფე ყველა მოწყობილობაზე, რაც პირდაპირ აისახება თქვენს რეიტინგზე Google-ში.",
+            sakon: "დაგვიტოვე საკონტაქტო",
         }
     };
 
+    // --- Translation Logic ---
     function updatePageText() {
         langBtns.forEach(btn => {
             btn.textContent = translations[currentLang].btn;
@@ -212,17 +250,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelectorAll("[data-key]").forEach(el => {
             const key = el.getAttribute("data-key");
-            if (translations[currentLang][key]) {
-                const content = translations[currentLang][key];
-                if (content.includes("<")) {
-                    el.innerHTML = content;
+            const translation = translations[currentLang][key];
+
+            if (translation) {
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.placeholder = translation;
+                } else if (el.tagName === 'OPTION') {
+                    el.textContent = translation;
                 } else {
-                    el.textContent = content;
+                    if (translation.includes("<")) {
+                        el.innerHTML = translation;
+                    } else {
+                        el.textContent = translation;
+                    }
                 }
             }
         });
     }
 
+    // --- Event Listeners ---
     langBtns.forEach(btn => {
         btn.addEventListener("click", (e) => {
             e.preventDefault();
@@ -240,6 +286,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // --- Global Utility Functions ---
     window.toggleChat = function() {
         const chat = document.getElementById("waChat");
         if (chat) {
@@ -257,30 +304,78 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open(url, "_blank");
     };
 
+    // Initial load call
     updatePageText();
 });
 
+// --- Page Transitions ---
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         document.body.classList.add("is-visible");
     }, 100);
 
     const links = document.querySelectorAll('a');
-    
     links.forEach(link => {
         link.addEventListener("click", e => {
             const href = link.getAttribute("href");
-
+            // Only transition for local .html files and not anchors
             if (href && href.endsWith(".html") && !href.startsWith("#")) {
                 e.preventDefault();
-                
                 document.body.classList.remove("is-visible");
                 document.body.classList.add("is-leaving");
-
                 setTimeout(() => {
                     window.location.href = href;
-                }, 600); 
+                }, 600);
             }
         });
     });
 });
+
+// --- Telegram Form Integration ---
+const contactForm = document.getElementById('invisible-form');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const token = '8758823324:AAE_MhVUBRP3feogX-yxa_CQ9KHVblvVBWI'; 
+        const chat_id = '1885063285'; 
+
+        const name = document.getElementById('user_name').value;
+        const phone = document.getElementById('user_phone').value;
+        const service = document.getElementById('user_service').value;
+        const details = document.getElementById('user_details').value || "არ არის მითითებული";
+        
+        const message = `🚀 *ახალი შეკვეთა Grand Ellite-ზე!*\n\n` +
+                        `👤 *სახელი:* ${name}\n` +
+                        `📞 *ნომერი:* ${phone}\n` +
+                        `🛠 *სერვისი:* ${service}\n` +
+                        `📝 *დეტალები:* ${details}`;
+        
+        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+
+        const btn = document.getElementById('submit-btn');
+        const success = document.getElementById('success-msg');
+
+        const originalBtnText = btn.innerText;
+        btn.innerText = 'იგზავნება...';
+        btn.disabled = true;
+
+        fetch(url)
+            .then(res => {
+                if(res.ok) {
+                    btn.style.display = 'none';
+                    success.style.display = 'block';
+                    contactForm.reset();
+                } else {
+                    alert('შეცდომაა ბოტის მონაცემებში.');
+                    btn.innerText = originalBtnText;
+                    btn.disabled = false;
+                }
+            })
+            .catch(() => {
+                alert('ინტერნეტის ხარვეზია.');
+                btn.innerText = originalBtnText;
+                btn.disabled = false;
+            });
+    });
+}
