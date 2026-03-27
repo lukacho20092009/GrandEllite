@@ -822,6 +822,7 @@ footer {
     background-color: #0b0b0b;
     color: #fff;
     font-family: 'Segoe UI', sans-serif;
+    margin-top: -100px;
 }
 
 .referral-container {
@@ -1233,5 +1234,263 @@ footer {
 @media screen and (max-width:600px) {
     .hero-content{
         margin-top: 50px;
+    }
+}
+
+
+.ge-main-wrapper {
+    padding: 100px 20px;
+    background: #0b0b0b; 
+    display: flex;
+    justify-content: center;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.ge-grid-container {
+    max-width: 1300px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px;
+    align-items: center;
+}
+
+.ge-form-block {
+    background: #141414;
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    transition: 0.4s;
+}
+
+.ge-form-block:hover {
+    border-color: gold;
+}
+
+.ge-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.ge-header h2 {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.ge-header p {
+    color: #888;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.ge-input-group {
+    margin-bottom: 20px;
+}
+
+.ge-input-group input, 
+.ge-input-group select, 
+.ge-input-group textarea {
+    width: 100%;
+    padding: 16px;
+    background: #1d1d1d;
+    border: 1px solid #333;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.ge-input-group input:focus, 
+.ge-input-group select:focus, 
+.ge-input-group textarea:focus {
+    border-color: gold;
+    background: #252525;
+}
+
+.ge-btn {
+    width: 100%;
+    padding: 18px;
+    background: gold;
+    border: none;
+    border-radius: 12px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.ge-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+}
+
+.success-message {
+    display: none;
+    color: #25D366;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+input::-webkit-outer-spin-button, 
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.ge-info-block {
+    color: white;
+}
+
+.ge-info-content h3 {
+    color: gold;
+    font-size: 32px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.ge-info-content > p {
+    color: #ccc;
+    font-size: 17px;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.ge-features-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.ge-features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 15px;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.ge-features-list li:hover {
+    background: rgba(255,255,255,0.05);
+    border-color: rgba(255,215,0,0.2);
+}
+
+.ge-features-list .icon {
+    font-size: 28px;
+    background: #1d1d1d;
+    padding: 15px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #333;
+}
+
+.ge-features-list h4 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    color: #fff;
+}
+
+.ge-features-list p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+    .ge-grid-container {
+        grid-template-columns: 1fr; 
+        gap: 60px;
+    }
+    
+    .ge-form-block {
+        order: 1; 
+        padding: 30px;
+    }
+    
+    .ge-info-block {
+        order: 2;
+        text-align: center;
+    }
+    
+    .ge-features-list li {
+        text-align: left;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .ge-header h2 { font-size: 22px; }
+}
+
+/* რბილი სქროლისთვის */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ღილაკის კონტეინერი */
+.ge-contact-action {
+    margin-top: 25px;
+}
+
+/* მთავარი ღილაკის სტილი */
+.ge-scroll-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #007aff 0%, #0056b3 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 122, 255, 0.3);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.ge-scroll-btn:hover {
+    transform: translateY(-3px);
+    box-shadow:     #00d4a5;
+;
+    background: linear-gradient(135deg, #0085ff 0%, #0062cc 100%);
+    color: #fff;
+}
+
+.ge-scroll-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 10px   #09b690;
+;
+}
+
+.ge-scroll-btn:hover::after {
+    transform: translateY(3px);
+}
+
+@media (max-width: 480px) {
+    .ge-scroll-btn {
+        width: 100%; 
+        padding: 16px;
+        font-size: 15px;
+        justify-content: center;
     }
 }
