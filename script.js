@@ -304,11 +304,9 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open(url, "_blank");
     };
 
-    // Initial load call
     updatePageText();
 });
 
-// --- Page Transitions ---
 document.addEventListener("DOMContentLoaded", () => {
     setTimeout(() => {
         document.body.classList.add("is-visible");
@@ -318,7 +316,6 @@ document.addEventListener("DOMContentLoaded", () => {
     links.forEach(link => {
         link.addEventListener("click", e => {
             const href = link.getAttribute("href");
-            // Only transition for local .html files and not anchors
             if (href && href.endsWith(".html") && !href.startsWith("#")) {
                 e.preventDefault();
                 document.body.classList.remove("is-visible");
@@ -330,52 +327,69 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
-
-// --- Telegram Form Integration ---
 const contactForm = document.getElementById('invisible-form');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+    contactForm.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         const token = '8758823324:AAE_MhVUBRP3feogX-yxa_CQ9KHVblvVBWI'; 
-        const chat_id = '1885063285'; 
+        const my_chat_id = '1885063285'; 
+
+        const influencers = {
+            "LUKA10": "INFLUENCER_1_ID",
+            "SABA25": "INFLUENCER_2_ID",
+            "GIO_GRAND": "INFLUENCER_3_ID"
+        };
+
+        const promoInput = document.getElementById('user_promo');
+        const promoError = document.getElementById('promo-error');
+        const promoValue = promoInput.value.trim().toUpperCase();
+
+        promoInput.classList.remove('input-error');
+        promoError.style.display = 'none';
+
+        if (promoValue !== "" && !influencers[promoValue]) {
+            promoInput.classList.add('input-error');
+            promoError.style.display = 'block';     
+            promoInput.focus();
+            return; 
+        }
 
         const name = document.getElementById('user_name').value;
         const phone = document.getElementById('user_phone').value;
         const service = document.getElementById('user_service').value;
         const details = document.getElementById('user_details').value || "არ არის მითითებული";
-        
+
         const message = `🚀 *ახალი შეკვეთა Grand Ellite-ზე!*\n\n` +
                         `👤 *სახელი:* ${name}\n` +
                         `📞 *ნომერი:* ${phone}\n` +
                         `🛠 *სერვისი:* ${service}\n` +
-                        `📝 *დეტალები:* ${details}`;
-        
-        const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(message)}&parse_mode=Markdown`;
+                        `📝 *დეტალები:* ${details}\n` +
+                        `🎟 *პრომოკოდი:* ${promoValue || "არ არის გამოყენებული"}`;
 
         const btn = document.getElementById('submit-btn');
         const success = document.getElementById('success-msg');
-
-        const originalBtnText = btn.innerText;
+        
         btn.innerText = 'იგზავნება...';
         btn.disabled = true;
 
-        fetch(url)
-            .then(res => {
-                if(res.ok) {
-                    btn.style.display = 'none';
-                    success.style.display = 'block';
-                    contactForm.reset();
-                } else {
-                    alert('შეცდომაა ბოტის მონაცემებში.');
-                    btn.innerText = originalBtnText;
-                    btn.disabled = false;
-                }
-            })
-            .catch(() => {
-                alert('ინტერნეტის ხარვეზია.');
-                btn.innerText = originalBtnText;
-                btn.disabled = false;
-            });
+        try {
+            await fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${my_chat_id}&text=${encodeURIComponent(message)}&parse_mode=Markdown`);
+
+            if (promoValue && influencers[promoValue]) {
+                const influencerMessage = `🎉 *შენი კოდით (${promoValue}) შემოვიდა კლიენტი!*\n👤 სახელი: ${name}\n🛠 სერვისი: ${service}`;
+                await fetch(`https://api.telegram.org/bot${token}/sendMessage?chat_id=${influencers[promoValue]}&text=${encodeURIComponent(influencerMessage)}&parse_mode=Markdown`);
+            }
+
+            btn.style.display = 'none';
+            success.style.display = 'block';
+            contactForm.reset();
+
+        } catch (error) {
+            btn.innerText = 'Send Message';
+            btn.disabled = false;
+            alert('Error sending message.');
+        }
     });
 }
