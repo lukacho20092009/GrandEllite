@@ -106,22 +106,99 @@
     </div>
 </section>
 
+<section class="ge-main-wrapper">
+    <div class="ge-grid-container">
+        
+        <div class="ge-form-block">
+            <div class="ge-header">
+                <h2 data-key="cont_h2">Start a Project with Grand Ellite</h2>
+                <p data-key="cont_p">Fill out the form and our team will contact you shortly</p>
+            </div>
+
+            <form id="invisible-form" class="ge-form">
+                <div class="ge-input-group">
+                    <input type="text" id="user_name" data-key="ph_name" placeholder="Your Name" required>
+                </div>
+
+                <div class="ge-input-group">
+                    <input type="number" id="user_phone" data-key="ph_phone" placeholder="Phone Number (5XX...)" required onwheel="return false;">
+                </div>
+
+                <div class="ge-input-group">
+                    <select id="user_service" required>
+                        <option value="Web Development" data-key="opt_web">Web Development</option>
+                    </select>
+                </div>
+
+                <div class="ge-input-group">
+                    <textarea id="user_details" data-key="ph_details" rows="4" placeholder="Briefly describe your project..." style="resize: none;"></textarea>
+                </div>
+
+                <button type="submit" id="submit-btn" class="ge-btn">
+                    <span data-key="btn_send">Send Message</span>
+                </button>
+                
+                <div id="success-msg" class="success-message" data-key="success_msg">
+                    ✔ Thank you! Your request has been received.
+                </div>
+            </form>
+        </div>
+
+        <div class="ge-info-block">
+            <div class="ge-info-content">
+                <h3 data-key="why_title">Why Grand Ellite?</h3>
+                <p data-key="why_desc">We create digital products that actually work.</p>
+                
+                <ul class="ge-features-list">
+                    <li>
+                        <span class="icon">📈</span>
+                        <div>
+                            <h4 data-key="feat_sales_h">Sales Oriented</h4>
+                            <p data-key="feat_sales_p">We don't just create beautiful websites; we build tools for your business growth.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">🛡️</span>
+                        <div>
+                            <h4 data-key="feat_supp_h">Full Support</h4>
+                            <p data-key="feat_supp_p">Our team knows exactly what your business needs to increase sales volume.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">⚡</span>
+                        <div>
+                            <h4 data-key="feat_speed_h">Optimization & Speed</h4>
+                            <p data-key="feat_speed_p">Maximum speed on all devices, which directly impacts your Google ranking.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
+
 <section class="contact" id="contact">
     <div class="contact-container">
         <div class="contact-info">
             <span class="sub-title" data-key="cont_sub">Contact</span>
-            <h2 class="contact-title" data-key="cont_h2">Start Your <span class="accent">Project</span></h2>
+            <h2 class="contact-title" data-key="cont_h2">Let's Start Your <span class="accent">Project</span></h2>
             <p class="contact-desc" data-key="cont_desc">Get in touch and let's build your profitable business together.</p>
             
             <div class="contact-methods">
-                
-<a href="mailto:grandellite45@yahoo.com" class="method-item">
+                <a href="tel:+995593216321" class="method-item">
+                    <div class="icon-img-box"><img src="https://cdn-icons-png.flaticon.com/512/3616/3616215.png" alt="Phone" class="method-img"></div>
+<div>
+    <h4 data-key="phone">ტელეფონი</h4>
+    <p data-key="number" >+1 951-598-7338</p>
+</div>                </a>
+<a href="mailto:grandellite45@yahoo.com" class="method-item" onclick="copyEmail(event, 'grandellite45@yahoo.com')">
     <div class="icon-img-box">
-        <img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="Email" class="method-img">
+        <img src="https://cdn-icons-png.flaticon.com/512/542/542689.png" alt="Email" class="method-img" style="width:40px;">
     </div>
     <div>
         <h4 data-key="email">Email</h4>
-        <p>grandellite45@yahoo.com</p>
+        <p id="email-text">grandellite45@yahoo.com</p>
     </div>
 </a>
             </div> 
@@ -135,11 +212,17 @@
                 <div class="card-footer">
                     <span>EST. 2026</span>
                     <div class="availability" data-key="avail">
-                        <span class="dot"></span> Available for Work
+                        <span class="dot"></span> Available for work
                     </div>
                 </div>
+                <div class="ge-info-content">
+    <div class="ge-contact-action">
+        <a href="#invisible-form" class="ge-scroll-btn" data-key="sakon">Leave Your Details</a>
+    </div>
+</div>
             </div>
-      </div>
+        </div>
+    </div>
 </section>
 
 <footer data-key="footer">
