@@ -337,8 +337,8 @@ if (contactForm) {
         const my_chat_id = '1885063285'; 
 
         const influencers = {
-            "LUKA10": "INFLUENCER_1_ID",
-            "SABA25": "INFLUENCER_2_ID",
+            "IRMA5": "INFLUENCER_1_ID",
+            "TODUA38": "INFLUENCER_2_ID",
             "GIO_GRAND": "INFLUENCER_3_ID"
         };
 
